@@ -1,6 +1,6 @@
 @import './variables.scss';
 
-html, body {
+html, body, #root {
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
@@ -13,6 +13,10 @@ html, body {
 }
 .text-gray {
     color: $primary-light-gray;
+}
+
+.text-dark-gray {
+    color: $primary-dark-gray;
 }
 
 .text-blue {
