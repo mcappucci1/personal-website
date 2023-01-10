@@ -1,3 +1,9 @@
+import { CustomNavbar } from './CustomNavbar';
+
 export const App = () => {
-    return (<div>test</div>);
+    return (
+        <>
+            <CustomNavbar />
+        </>
+    );
 }
