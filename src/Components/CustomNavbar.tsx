@@ -1,12 +1,34 @@
 import { Navbar, Nav } from 'react-bootstrap';
 import { SECTIONS } from '../Utils/Data';
+import { useState, useCallback, useEffect } from 'react';
+import { CustomSidebar } from './CustomSidebar';
 
 export const CustomNavbar = () => {
+
+    const [openSidebar, setOpenSidebar] = useState(false);
+
+    const handleToggleSidebar = useCallback(() => {
+        setOpenSidebar(!openSidebar);
+    }, [setOpenSidebar, openSidebar]);
+
+    const handleWindowResize = useCallback(() => {
+        console.log(window.innerWidth)
+        if (openSidebar && window.innerWidth >= 768){
+            setOpenSidebar(false);
+        }
+    }, [openSidebar]);
+
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowResize);
+        return () => window.removeEventListener('resize', handleWindowResize)
+    }, [handleWindowResize]);
+
     return (
         <Navbar className='px-5 py-3 blue-bottom-border' expand='md' sticky='top'>
-            <button className='ms-auto navbar-toggler custom-toggle .navbar-toggler-icon'>
+            <button className='ms-auto navbar-toggler custom-toggle' onClick={handleToggleSidebar}>
                 <span className="navbar-toggler-icon"></span>
             </button>
+            <CustomSidebar open={openSidebar} toggleSidebar={handleToggleSidebar} />
             <Navbar.Collapse>
                 <Nav className='ms-auto'>
                     <div className='d-flex me-4'>
