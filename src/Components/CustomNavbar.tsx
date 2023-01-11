@@ -24,7 +24,7 @@ export const CustomNavbar = () => {
     }, [handleWindowResize]);
 
     return (
-        <Navbar className='px-5 py-3 blue-bottom-border' expand='md' sticky='top'>
+        <Navbar className='px-5 py-3 blue-bottom-border bg-black' expand='md' sticky='top'>
             <button className='ms-auto navbar-toggler custom-toggle' onClick={handleToggleSidebar}>
                 <span className="navbar-toggler-icon"></span>
             </button>

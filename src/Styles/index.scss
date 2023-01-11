@@ -7,12 +7,24 @@ html, body, #root {
     background-color: black;
 }
 
-.t {
-    height: 50px;
-    width: 50px;
-}
 .text-gray {
     color: $primary-light-gray;
+}
+
+li {
+    list-style-type: circle;
+}
+
+.text-marroon {
+    color: #800000;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.spacer {
+    border-top: 1px solid $primary-dark-gray;
 }
 
 .text-dark-gray {
