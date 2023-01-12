@@ -1,14 +1,27 @@
 import { CustomNavbar } from './CustomNavbar';
 import { SectionTitle } from './SectionTitle';
 import { SECTIONS } from '../Utils/Data';
+import { IMAGE_NAMES } from '../images/ImageNames';
+import { useEffect, useState } from 'react';
+import '../Styles/App.scss';
 
 export const App = () => {
+
+    const [picIndex, setPicIndex] = useState(0);
+
+    useEffect(() => {
+        const key = setInterval(() => {
+            setPicIndex((picIndex + 1) % IMAGE_NAMES.length);
+        }, 3000);
+        return () => clearInterval(key);
+    }, [picIndex]);
+
     return (
         <>
             <CustomNavbar />
-            <div className='container h-100'>
-                <div className='row h-100 justify-content-center'>
-                    <div className='h-75 col-12 col-md-10 d-flex justify-content-center align-items-center '>
+            <div className='container'>
+                <div className='full-view-height row justify-content-center align-items-center'>
+                    <div className='col-12 col-xl-10 d-flex justify-content-center align-items-center'>
                         <div className='h-75'>
                             <h5 className='text-blue'>Hi, my name is</h5>
                             <h1 className='display-1 text-gray'>Matthew Cappucci.</h1>
@@ -22,8 +35,8 @@ export const App = () => {
                         </div>
                     </div>
                 </div>
-                <div className='row h-100 justify-content-center'>
-                    <div className='h-75 col-12 col-md-10'>
+                <div className='full-view-height row justify-content-center'>
+                    <div className='h-75 col-12 col-xl-10'>
                         <SectionTitle number={1} section={SECTIONS[0]} />
                         <div className='row mt-4'>
                             <div className='col-7'>
@@ -71,17 +84,11 @@ export const App = () => {
                                     </div>
                                 </p>
                             </div>
-                            <div className='col-5'>
-                                <img
-                                    src={require('../images/profile.jpg')}
-                                    alt='not found'
-                                    width='400px'
-                                    height='200px'
-                                />
+                            <div className='col-5 p-0'>
+                                <img src={require(`../images/${IMAGE_NAMES[picIndex]}`)} alt='im' width='100%' />
                             </div>
                         </div>
                     </div>
-                    <div className='h-25'></div>
                 </div>
             </div>
         </>

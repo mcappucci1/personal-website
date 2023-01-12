@@ -3,12 +3,19 @@
 html, body, #root {
     height: 100vh;
     width: 100vw;
-    overflow-x: hidden;
     background-color: black;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 .text-gray {
     color: $primary-light-gray;
+}
+
+.full-view-height {
+    height: 100vh;
 }
 
 li {
