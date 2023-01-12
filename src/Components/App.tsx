@@ -35,8 +35,9 @@ export const App = () => {
                         </div>
                     </div>
                 </div>
+                <section id='test'></section>
                 <div className='full-view-height row justify-content-center'>
-                    <div className='h-75 col-12 col-xl-10'>
+                    <div className='col-12 col-xl-10'>
                         <SectionTitle number={1} section={SECTIONS[0]} />
                         <div className='row mt-4'>
                             <div className='col-7'>
@@ -90,6 +91,33 @@ export const App = () => {
                         </div>
                     </div>
                 </div>
+                <div className='row justify-content-center align-items-center'>
+                    <div className='col-12 col-xl-10 p-0 justify-content-start align-items-center'>
+                        <SectionTitle number={2} section={SECTIONS[1]} />
+                        <div className='d-flex mt-3 test'>
+                            <div className='d-flex flex-column test'>
+                                <button className='text-gray d-flex align-items-center job-tab'>
+                                    Lockheed Martin
+                                </button>
+                                <button className='text-gray d-flex align-items-center job-tab'>
+                                    Palantir
+                                </button>
+                                <button className='text-gray d-flex align-items-center job-tab'>
+                                    BlueCreek Software
+                                </button>
+                            </div>
+                            <div className='d-flex flex-column test ps-2'>
+                                <h4 className='text-gray'>Software Engineer <span className='text-blue'>@ Lockheed Martin</span></h4>
+                                <p className='text-dark-gray'>Janurary 2022 - Present</p>
+                                <ul className='text-gray'>
+                                    <li>Explain the job</li>
+                                    <li>Explain the job some more</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section id='test'></section>
             </div>
         </>
     );

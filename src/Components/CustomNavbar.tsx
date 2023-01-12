@@ -2,6 +2,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { SECTIONS } from '../Utils/Data';
 import { useState, useCallback, useEffect } from 'react';
 import { CustomSidebar } from './CustomSidebar';
+import '../Styles/CustomNavbar.scss';
 
 export const CustomNavbar = () => {
 
@@ -35,9 +36,9 @@ export const CustomNavbar = () => {
                     {
                         SECTIONS.map((section, i) => {
                             return (
-                                <Nav.Link key={section.name} href={section.link} className='me-2'>
+                                <Nav.Link key={section.name} href={'#test'} className='me-2 text-gray text-hover-blue'>
                                     <span className='text-blue'>{i+1}.</span>
-                                    <span className='text-gray'> {section.name}</span>
+                                    <span> {section.name}</span>
                                 </Nav.Link>
                             );
                         })
