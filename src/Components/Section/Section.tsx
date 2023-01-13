@@ -1,6 +1,6 @@
 import { SectionTitle } from './SectionTitle';
-import { SECTIONS } from '../Utils/Data';
-import '../Styles/Section.scss';
+import { SECTIONS } from '../../Utils/Data';
+import '../../Styles/Section.scss';
 
 interface Props {
     sectionNumber?: number;

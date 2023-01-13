@@ -1,8 +1,8 @@
 import { CustomNavbar } from './CustomNavbar';
-import { Section } from './Section';
-import { Title } from './Title';
-import { AboutMe } from './AboutMe';
-import { WorkExperience } from './WorkExperience';
+import { Section } from './Section/Section';
+import { Title } from './SectionContent/Title';
+import { AboutMe } from './SectionContent/AboutMe';
+import { WorkExperience } from './SectionContent/WorkExperience';
 import '../Styles/App.scss';
 
 export const App = () => {

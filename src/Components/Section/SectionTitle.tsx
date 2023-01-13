@@ -1,4 +1,4 @@
-import { SectionType } from '../Utils/Data';
+import { SectionType } from '../../Utils/Data';
 
 interface Props {
     number: number;
