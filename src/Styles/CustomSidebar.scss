@@ -36,3 +36,11 @@
     border: none;
     background-color: transparent;
 }
+
+.active {
+    color: $primary-light-gray !important;
+}
+
+.active:hover {
+    color: $primary-blue !important;
+}

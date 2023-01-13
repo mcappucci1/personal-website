@@ -21,9 +21,9 @@ export const CustomSidebar = ({ open, toggleSidebar }: Props) => {
                     {
                         SECTIONS.map((section, i) => {
                             return (
-                                <Nav.Link key={section.name} href={section.name} className='mb-5'>
+                                <Nav.Link onClick={toggleSidebar} key={section.name} href={`#${section.name}`} className='text-gray text-hover-blue mb-5'>
                                     <div className='text-blue'>{i+1}.</div>
-                                    <span className='text-gray'> {section.name}</span>
+                                    <span> {section.name}</span>
                                 </Nav.Link>
                             );
                         })
