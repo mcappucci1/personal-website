@@ -36,7 +36,7 @@ export const CustomNavbar = () => {
                     {
                         SECTIONS.map((section, i) => {
                             return (
-                                <Nav.Link key={section.name} href={'#test'} className='me-2 text-gray text-hover-blue'>
+                                <Nav.Link key={section.name} href={`#${section.name}`} className='me-2 text-gray text-hover-blue'>
                                     <span className='text-blue'>{i+1}.</span>
                                     <span> {section.name}</span>
                                 </Nav.Link>

@@ -35,7 +35,7 @@ export const App = () => {
                         </div>
                     </div>
                 </div>
-                <section id='test'></section>
+                <section id={SECTIONS[0].name}></section>
                 <div className='full-view-height row justify-content-center'>
                     <div className='col-12 col-xl-10'>
                         <SectionTitle number={1} section={SECTIONS[0]} />
@@ -91,6 +91,7 @@ export const App = () => {
                         </div>
                     </div>
                 </div>
+                <section id={SECTIONS[1].name}></section>
                 <div className='row justify-content-center align-items-center'>
                     <div className='col-12 col-xl-10 p-0 justify-content-start align-items-center'>
                         <SectionTitle number={2} section={SECTIONS[1]} />

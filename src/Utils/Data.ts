@@ -1,12 +1,11 @@
 export type Section = {
     name: string;
-    link: string;
     sectionHeader: string;
 }
 
 export const SECTIONS: Section[] = [
-    { name: 'About', link: '#about', sectionHeader: 'About Me' },
-    { name: 'Work', link: '#work', sectionHeader: 'Work Experience' },
-    { name: 'Projects', link: '#projects', sectionHeader: 'Personal Projects' },
-    { name: 'Contact', link: '#contact', sectionHeader: 'Contact Information' }
+    { name: 'About', sectionHeader: 'About Me' },
+    { name: 'Work', sectionHeader: 'Work Experience' },
+    { name: 'Projects', sectionHeader: 'Personal Projects' },
+    { name: 'Contact', sectionHeader: 'Contact Information' }
 ];
