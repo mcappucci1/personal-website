@@ -1,8 +1,8 @@
-import { Section } from '../Utils/Data';
+import { SectionType } from '../Utils/Data';
 
 interface Props {
     number: number;
-    section: Section;
+    section: SectionType;
 }
 
 export const SectionTitle = ({ number, section }: Props) => {
