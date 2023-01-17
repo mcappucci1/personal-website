@@ -1,0 +1,18 @@
+@import './variables.scss';
+
+.job-tab {
+    width: 175px;
+    height: 60px;
+    vertical-align: center;
+    background-color: black;
+    padding: 0;
+    transition-duration: 300ms;
+}
+
+.job-tab:hover, .job-tab-selected {
+    background-color: $dim-dark-gray;
+}
+
+.job-tab-selected {
+    border-left: 2px solid $primary-blue;
+}

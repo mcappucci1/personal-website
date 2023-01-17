@@ -1,23 +1,39 @@
+import { WorkExperienceButton } from "./WorkExperienceButton";
+import { Job, JOBS } from '../../Utils/Data';
+import { useState, useCallback } from 'react';
+import '../../Styles/WorkExperience.scss';
+
+
 export const WorkExperience = () => {
+
+    const [currentJob, setCurrentJob] = useState<Job>(JOBS[0]);
+
+    const handleClickJob = useCallback((job: Job) => {
+        setCurrentJob(job);
+    }, [setCurrentJob]);
+
     return (
-        <div className='d-flex mt-3 test'>
-            <div className='d-flex flex-column test'>
-                <button className='text-gray d-flex align-items-center job-tab'>
-                    Lockheed Martin
-                </button>
-                <button className='text-gray d-flex align-items-center job-tab'>
-                    Palantir
-                </button>
-                <button className='text-gray d-flex align-items-center job-tab'>
-                    BlueCreek Software
-                </button>
+        <div className='d-flex mt-3'>
+            <div className='d-flex flex-column'>
+                {
+                    JOBS.map((job) => {
+                        return (
+                            <WorkExperienceButton job={job} onClick={handleClickJob} selected={job.date === currentJob.date} />
+                        );
+                    })
+                }
             </div>
-            <div className='d-flex flex-column test ps-2'>
-                <h4 className='text-gray'>Software Engineer <span className='text-blue'>@ Lockheed Martin</span></h4>
-                <p className='text-dark-gray'>Janurary 2022 - Present</p>
+            <div className='d-flex flex-column ps-4'>
+                <h4 className='text-gray'>{currentJob.title} <span className='text-blue'>@ {currentJob.companyName}</span></h4>
+                <p className='text-dark-gray'>{currentJob.date}</p>
                 <ul className='text-gray'>
-                    <li>Explain the job</li>
-                    <li>Explain the job some more</li>
+                    {
+                        currentJob.bulletPoints.map((point) => {
+                            return (
+                                <li><span className='text-gray'>{point}</span></li>
+                            );
+                        })
+                    }
                 </ul>
             </div>
         </div>
